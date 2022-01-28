@@ -1,0 +1,20 @@
+<%- include("partials/header");-%>
+<h1>Home</h1>
+<p> <%=startingContent%></p>
+
+
+<!-- <% for( var i=0 i<posts.len i++){ %>
+<% consle.log(posts[i].title);  %>
+<% };%>
+using forEach instead offor loops using the lettersArray.forEach(function(letter){
+
+}) -->
+
+<% posts.forEach(function(post){ %>
+   <h1><%=post.title %></h1>
+   <p>
+   <%= post.content.substring(0,100)+" ..." %>
+   <a href="/posts/<%=post.title%>">Read more</a>
+   </p>
+<% }) %>
+<%- include("partials/footer");-%>
